@@ -24,4 +24,5 @@ df = spark.read.format("json").schema(myManualSchema)\
 expr("(((someCol + 5) * 200) - 6) < otherCol")
 
 # doing the same thing with columns would be like
-c
+(((col("someCol")+ 5)*200 -6)< col("otherCol"))
+
